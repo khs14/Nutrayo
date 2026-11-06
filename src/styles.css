@@ -3,6 +3,10 @@
 
 /* ---------- Tokens ---------- */
 :root {
+  --scroll-thumb: color-mix(in oklab, var(--trace) 55%, var(--line));
+  --scroll-thumb-hover: var(--trace);
+  --select-bg: #3fb5aa;
+  --select-fg: #000000;
   --paper: #f2f5ef;
   --surface: #ffffff;
   --ink: #17241c;
@@ -29,6 +33,35 @@
   --touch: 36px;
   color-scheme: light;
 }
+
+/* Thin scrollbars in the site's teal, adjusting to light and dark mode
+   (Chrome, Edge, Firefox) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+/* Same look in Safari */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); }
+
+/* Rows that scroll sideways on phones keep their scrollbars hidden */
+.chips::-webkit-scrollbar,
+.nav::-webkit-scrollbar { display: none; }
+
+/* Selected text: teal highlight, white text */
+::selection {
+  background: var(--select-bg);
+  color: var(--select-fg);
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --paper: #111914;
