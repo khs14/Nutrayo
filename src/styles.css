@@ -3,10 +3,6 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  --scroll-thumb: color-mix(in oklab, var(--trace) 55%, var(--line));
-  --scroll-thumb-hover: var(--trace);
-  --select-bg: #3fb5aa;
-  --select-fg: #000000;
   --paper: #f2f5ef;
   --surface: #ffffff;
   --ink: #17241c;
@@ -33,35 +29,6 @@
   --touch: 36px;
   color-scheme: light;
 }
-
-/* Thin scrollbars in the site's teal, adjusting to light and dark mode
-   (Chrome, Edge, Firefox) */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scroll-thumb) transparent;
-}
-
-/* Same look in Safari */
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb);
-  border-radius: 999px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); }
-
-/* Rows that scroll sideways on phones keep their scrollbars hidden */
-.chips::-webkit-scrollbar,
-.nav::-webkit-scrollbar { display: none; }
-
-/* Selected text: teal highlight, white text */
-::selection {
-  background: var(--select-bg);
-  color: var(--select-fg);
-}
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --paper: #111914;
@@ -260,7 +227,8 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Narrow table: hide small labels, move the key below the grid */
 @container (max-width: 700px) {
-  .tile .tname, .tile .num { display: none; }
+  .tile .tname { font-size: clamp(0.6rem, 1.45cqi, 0.8rem); margin-top: 4%; }
+  .tile .num { font-size: clamp(0.55rem, 2.1cqi, 0.8rem); top: 6%; left: 8%; }
   .tile { padding: 14% 2% 4%; }
   .tile .sym { font-size: clamp(0.9rem, 5.2cqi, 2rem); }
   .tile .count { font-size: clamp(0.55rem, 2.2cqi, 0.8rem); }
@@ -631,3 +599,48 @@ button.food-name:hover, a.food-name:hover { text-decoration: underline; text-und
 .confirm { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.88rem; }
 .undo { font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
 .undo .link-btn { color: var(--ink); font-weight: 700; }
+
+/* Very small tiles (phones): no room for the number beside the food count */
+/* Small tiles (tablets, phones): symbol and count only */
+@container (max-width: 580px) {
+  .tile .tname { display: none; }
+}
+@container (max-width: 430px) {
+  .tile .num { display: none; }
+}
+
+/* ---------- Scrollbars and text selection ---------- */
+:root {
+  --scroll-thumb: color-mix(in oklab, var(--trace) 55%, var(--line));
+  --scroll-thumb-hover: var(--trace);
+  --select-bg: #3fb5aa;
+  --select-fg: #ffffff;
+}
+
+/* Thin scrollbars in the site's teal, adjusting to light and dark mode
+   (Chrome, Edge, Firefox) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+/* Same look in Safari */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); }
+
+/* Rows that scroll sideways on phones keep their scrollbars hidden */
+.chips::-webkit-scrollbar,
+.nav::-webkit-scrollbar { display: none; }
+
+/* Selected text: teal highlight, white text */
+::selection {
+  background: var(--select-bg);
+  color: var(--select-fg);
+}
