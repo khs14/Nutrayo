@@ -12,6 +12,31 @@ import json, re, sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from foodlist import FOODS, SERVINGS, ODS
 
+
+def read_json(path):
+    """Read JSON as UTF-8. Files saved by older versions on Windows used the
+    Windows encoding, so fall back to it; the next save rewrites them as UTF-8."""
+    raw = open(path, 'rb').read()
+    try:
+        text = raw.decode('utf-8')
+    except UnicodeDecodeError:
+        text = raw.decode('cp1252', errors='replace')
+    return json.loads(text)
+
+
+def iso_date(text):
+    """M/D/YYYY or YYYY-MM-DD -> YYYY-MM-DD."""
+    t = str(text or '').strip()
+    m = re.match(r'^(\d{1,2})/(\d{1,2})/(\d{4})$', t)
+    if m:
+        return f'{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}'
+    return t[:10]
+
+
+def write_json(path, data, **kw):
+    with open(path, 'w', encoding='utf-8', newline='\n') as fh:
+        json.dump(data, fh, ensure_ascii=False, **kw)
+
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 _args = [a for a in sys.argv[1:] if not a.startswith('--')]
 SR = _args[0] if _args else os.path.join(ROOT, 'data-sources', 'sr28')
@@ -19,8 +44,8 @@ MAP_FILE = os.path.join(os.path.dirname(__file__), 'foundation_map.json')
 CACHE_FILE = os.path.join(os.path.dirname(__file__), 'foundation_cache.json')
 foundation_map, foundation = {}, {'foods': {}}
 if os.path.exists(MAP_FILE) and os.path.exists(CACHE_FILE):
-    foundation_map = json.load(open(MAP_FILE))
-    foundation = json.load(open(CACHE_FILE))
+    foundation_map = read_json(MAP_FILE)
+    foundation = read_json(CACHE_FILE)
 
 # ABBREV.txt column index for each nutrient (SR28 documentation, Table 6).
 COL = {
@@ -44,7 +69,7 @@ def rows(name):
 
 abbrev = {r[0]: r for r in rows('ABBREV.txt')}
 des = {r[0]: r for r in rows('FOOD_DES.txt')}
-nutrients = json.load(open(os.path.join(ROOT, 'src/data/nutrients.json')))['nutrients']
+nutrients = read_json(os.path.join(ROOT, 'src/data/nutrients.json'))['nutrients']
 DV = {n['id']: n['dv'] for n in nutrients}
 
 def slug(s):
@@ -87,7 +112,7 @@ for ndb, name, form, cat, skey, allergens, tip in FOODS:
             if nid in COL or nid in ODS:
                 per100[nid] = rnd(v)
                 src[nid] = 'fnd'
-        fnd = {'fdcId': m['fdcId'], 'name': m.get('foundation', ''), 'published': rec.get('published', '')}
+        fnd = {'fdcId': m['fdcId'], 'name': ' '.join(m.get('foundation', '').split()), 'published': iso_date(rec.get('published', ''))}
     pct = {nid: v * grams / 100 / DV[nid] * 100 for nid, v in per100.items()}
     high = [n for n, p in pct.items() if p >= 20]
     good = [n for n, p in pct.items() if 10 <= p < 20]
@@ -116,13 +141,13 @@ doc = {
         'ods': 'Biotin, iodine and omega-3 values from NIH Office of Dietary Supplements fact sheets (Table 2 in each), converted to per 100 g. Only foods listed there have these values.',
         'fnd': 'Where marked, values come from USDA Foundation Foods, which USDA updates every April and October.',
         'foundationFetched': foundation.get('fetchedAt'),
-        'foundationRelease': foundation.get('release'),
+        'foundationRelease': max((iso_date(v.get('published')) for v in foundation['foods'].values() if v.get('published')), default=None),
         'levels': "Rich source: one serving gives 20% or more of the FDA Daily Value. Good source: 10-19%. Servings are FDA reference amounts (21 CFR 101.12).",
     },
     'categories': categories,
     'foods': out,
 }
-json.dump(doc, open(os.path.join(ROOT, 'src/data/foods.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+write_json(os.path.join(ROOT, 'src/data/foods.json'), doc, separators=(',', ':'))
 print(f'{len(out)} foods written' + (f", {sum(1 for f in out if 'foundation' in f)} with Foundation Foods values" if foundation['foods'] else ''))
 for p in problems: print('PROBLEM', p)
 # For manual review: our name vs USDA's description

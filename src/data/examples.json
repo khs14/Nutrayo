@@ -1,7 +1,7 @@
 [
   { "id": "lentil-spinach", "title": "Lentils, spinach and red pepper",
     "foods": ["lentils", "spinach", "red-bell-pepper"],
-    "why": "Lentils and spinach carry iron from plants, which the body absorbs less easily than iron from meat. Vitamin C in the same meal, here from red pepper, helps you absorb more of it." },
+    "why": "Lentils carry iron from plants, which the body absorbs less easily than iron from meat. Vitamin C in the same meal, here from red pepper, helps you absorb more of it. Spinach adds folate and vitamin A; it has less iron than its reputation suggests." },
   { "id": "oats-milk-chia", "title": "Oats, milk, chia seeds and strawberries",
     "foods": ["oats", "whole-milk", "chia-seeds", "strawberries"],
     "why": "Oats bring fiber and manganese, milk adds calcium and B12, chia seeds add plant omega-3, and strawberries cover vitamin C." },

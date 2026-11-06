@@ -25,23 +25,43 @@ Steps (all run by default, or pick one with --step):
 
 Only Python 3.9+ standard library is needed.
 """
-import argparse
-import csv
-import io
-import json
-import os
-import re
-import subprocess
-import sys
-import time
-import urllib.error
-import urllib.request
-import zipfile
+import argparse, csv, io, json, os, re, subprocess, sys, time, urllib.error, urllib.request, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from foodlist import FOODS  # noqa: E402
+
+
+def read_json(path):
+    """Read JSON as UTF-8. Files saved by older versions on Windows used the
+    Windows encoding, so fall back to it; the next save rewrites them as UTF-8."""
+    raw = open(path, 'rb').read()
+    try:
+        text = raw.decode('utf-8')
+    except UnicodeDecodeError:
+        text = raw.decode('cp1252', errors='replace')
+    return json.loads(text)
+
+
+def write_json(path, data, **kw):
+    with open(path, 'w', encoding='utf-8', newline='\n') as fh:
+        json.dump(data, fh, ensure_ascii=False, **kw)
+
+
+def clean(text):
+    """Tidy USDA names: collapse odd spacing such as non-breaking spaces."""
+    return ' '.join(str(text).split())
+
+
+def iso_date(text):
+    """USDA dates come as YYYY-MM-DD or M/D/YYYY; return YYYY-MM-DD so they sort correctly."""
+    t = str(text or '').strip()
+    m = re.match(r'^(\d{1,2})/(\d{1,2})/(\d{4})$', t)
+    if m:
+        return f'{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}'
+    m = re.match(r'^(\d{4}-\d{2}-\d{2})', t)
+    return m.group(1) if m else t
 
 MAP_FILE = os.path.join(HERE, 'foundation_map.json')
 CACHE_FILE = os.path.join(HERE, 'foundation_cache.json')
@@ -116,8 +136,7 @@ def derive(raw):
     # Vitamin A as RAE (320); else retinol + carotenoids (IOM 2001 factors)
     v = get('320', 'ug')
     if v is None:
-        parts = [get('319', 'ug'), get('321', 'ug'),
-                 get('322', 'ug'), get('334', 'ug')]
+        parts = [get('319', 'ug'), get('321', 'ug'), get('322', 'ug'), get('334', 'ug')]
         if any(p is not None for p in parts):
             r, b, a, c = (p or 0 for p in parts)
             v = r + b / 12 + a / 24 + c / 24
@@ -151,8 +170,7 @@ class Api:
         url = f'{BASE_URL}{path}?api_key={self.key}'
         data = json.dumps(body).encode()
         for attempt in range(4):
-            req = urllib.request.Request(url, data=data, headers={
-                                         'Content-Type': 'application/json'})
+            req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
             try:
                 self.calls += 1
                 with urllib.request.urlopen(req, timeout=60) as r:
@@ -164,13 +182,11 @@ class Api:
                 if e.code == 400 and allow_400:
                     return None
                 if e.code in (401, 403):
-                    sys.exit(
-                        f'USDA rejected the API key (HTTP {e.code}). Check the key passed with --api-key.')
+                    sys.exit(f'USDA rejected the API key (HTTP {e.code}). Check the key passed with --api-key.')
                 if e.code >= 500 and attempt < 3:
                     time.sleep(2 ** attempt)
                     continue
-                sys.exit(
-                    f'USDA API error HTTP {e.code} on {path}: {e.read()[:300]!r}')
+                sys.exit(f'USDA API error HTTP {e.code} on {path}: {e.read()[:300]!r}')
             except urllib.error.URLError as e:
                 if attempt < 3:
                     time.sleep(2 ** attempt)
@@ -180,8 +196,7 @@ class Api:
     def foundation_list(self):
         foods, page, size = [], 1, 200
         while True:
-            batch = self.request(
-                '/foods/list', {'dataType': ['Foundation'], 'pageSize': size, 'pageNumber': page}, allow_400=True)
+            batch = self.request('/foods/list', {'dataType': ['Foundation'], 'pageSize': size, 'pageNumber': page}, allow_400=True)
             if batch is None:  # page size not accepted: start again with smaller pages
                 if size == 50:
                     sys.exit('USDA rejected the food list request (HTTP 400).')
@@ -189,14 +204,12 @@ class Api:
                 continue
             if not batch:
                 break
-            foods += [{'fdcId': f['fdcId'], 'description': f['description'],
-                       'published': f.get('publicationDate') or f.get('publishedDate') or ''}
+            foods += [{'fdcId': f['fdcId'], 'description': clean(f['description']),
+                       'published': iso_date(f.get('publicationDate') or f.get('publishedDate'))}
                       for f in batch if f.get('dataType', 'Foundation') == 'Foundation']
-            # keep going until USDA returns an empty page (it may cap the page size)
-            page += 1
+            page += 1  # keep going until USDA returns an empty page (it may cap the page size)
             if page > 500:
-                sys.exit(
-                    'Stopped after 500 pages of results; something is wrong with the food list.')
+                sys.exit('Stopped after 500 pages of results; something is wrong with the food list.')
         return foods
 
     def nutrients(self, fdc_ids):
@@ -205,7 +218,7 @@ class Api:
         ids = list(fdc_ids)
         for i in range(0, len(ids), 20):
             for food in self.request('/foods', {'fdcIds': ids[i:i + 20]}) or []:
-                out[food['fdcId']] = {'published': food.get('publicationDate', ''),
+                out[food['fdcId']] = {'published': iso_date(food.get('publicationDate')),
                                       'raw': normalise_nutrients(food.get('foodNutrients') or [])}
         return out
 
@@ -215,12 +228,10 @@ def normalise_nutrients(items):
     raw = {}
     for n in items:
         nested = n.get('nutrient') or {}
-        number = nested.get('number') or n.get(
-            'nutrientNumber') or n.get('number')
+        number = nested.get('number') or n.get('nutrientNumber') or n.get('number')
         amount = n.get('amount', n.get('value'))
         unit = nested.get('unitName') or n.get('unitName') or ''
-        name = nested.get('name') or n.get(
-            'nutrientName') or n.get('name') or ''
+        name = nested.get('name') or n.get('nutrientName') or n.get('name') or ''
         if number is None or amount is None:
             continue
         raw[clean_number(number)] = (float(amount), unit, name)
@@ -238,37 +249,31 @@ class Csv:
     def __init__(self, path):
         self.path = path
         self.zip = zipfile.ZipFile(path) if path.endswith('.zip') else None
-        names = [os.path.basename(path.rstrip('/'))] + \
-            (self.zip.namelist()[:5] if self.zip else [])
-        found = [m.group(1) for n in names for m in [
-            re.search(r'(\d{4}-\d{2}-\d{2})', n)] if m]
+        names = [os.path.basename(path.rstrip('/'))] + (self.zip.namelist()[:5] if self.zip else [])
+        found = [m.group(1) for n in names for m in [re.search(r'(\d{4}-\d{2}-\d{2})', n)] if m]
         self.release_date = found[0] if found else None
 
     def open(self, name):
         if self.zip:
-            matches = [n for n in self.zip.namelist(
-            ) if n.endswith('/' + name) or n == name]
+            matches = [n for n in self.zip.namelist() if n.endswith('/' + name) or n == name]
             if not matches:
-                sys.exit(
-                    f'{name} not found in {self.path}. Is this the Foundation Foods CSV download?')
+                sys.exit(f'{name} not found in {self.path}. Is this the Foundation Foods CSV download?')
             return io.TextIOWrapper(self.zip.open(matches[0]), encoding='utf-8-sig')
         for dirpath, _, files in os.walk(self.path):
             if name in files:
                 return open(os.path.join(dirpath, name), encoding='utf-8-sig')
-        sys.exit(
-            f'{name} not found under {self.path}. Is this the Foundation Foods CSV download?')
+        sys.exit(f'{name} not found under {self.path}. Is this the Foundation Foods CSV download?')
 
     def rows(self, name, needed):
         reader = csv.DictReader(self.open(name))
         missing = [c for c in needed if c not in (reader.fieldnames or [])]
         if missing:
-            sys.exit(
-                f'{name} is missing columns {missing}. USDA may have changed the file format; columns found: {reader.fieldnames}')
+            sys.exit(f'{name} is missing columns {missing}. USDA may have changed the file format; columns found: {reader.fieldnames}')
         return reader
 
     def foundation_list(self):
         if not hasattr(self, '_foods'):
-            self._foods = [{'fdcId': int(r['fdc_id']), 'description': r['description'], 'published': r.get('publication_date', '')}
+            self._foods = [{'fdcId': int(r['fdc_id']), 'description': clean(r['description']), 'published': iso_date(r.get('publication_date'))}
                            for r in self.rows('food.csv', ['fdc_id', 'data_type', 'description'])
                            if r['data_type'] == 'foundation_food']
         return self._foods
@@ -277,10 +282,8 @@ class Csv:
         wanted = set(fdc_ids)
         meta = {r['id']: (clean_number(r['nutrient_nbr']), r['unit_name'], r['name'])
                 for r in self.rows('nutrient.csv', ['id', 'name', 'unit_name', 'nutrient_nbr'])}
-        published = {f['fdcId']: f['published']
-                     for f in self.foundation_list()}
-        out = {i: {'published': published.get(
-            i, ''), 'raw': {}} for i in wanted}
+        published = {f['fdcId']: f['published'] for f in self.foundation_list()}
+        out = {i: {'published': published.get(i, ''), 'raw': {}} for i in wanted}
         for r in self.rows('food_nutrient.csv', ['fdc_id', 'nutrient_id', 'amount']):
             fid = int(r['fdc_id'])
             if fid in wanted and r['amount'] not in ('', None) and r['nutrient_id'] in meta:
@@ -308,8 +311,7 @@ def _norm(w):
 
 
 def tokens(desc):
-    d = desc.lower().replace('dry heat', '').replace(
-        'moist heat', '')  # cooking methods, not "dried"
+    d = desc.lower().replace('dry heat', '').replace('moist heat', '')  # cooking methods, not "dried"
     return {_norm(w) for w in re.findall(r"[a-z][a-z\-]*", d)}
 
 
@@ -322,8 +324,7 @@ def confident(ours, theirs):
     """Same state, every word of ours present in theirs, and theirs adds only harmless words."""
     if state(ours) != state(theirs) or not same_food(ours, theirs):
         return False
-    a, b = tokens(ours) - STOP - STATE_WORDS, tokens(theirs) - \
-        STOP - STATE_WORDS
+    a, b = tokens(ours) - STOP - STATE_WORDS, tokens(theirs) - STOP - STATE_WORDS
     return bool(a) and a <= b and (b - a) <= BENIGN
 
 
@@ -333,8 +334,7 @@ def state(desc):
     if s & {'boiled', 'roasted', 'baked', 'broiled', 'braised', 'simmered', 'grilled', 'steamed', 'pan-broiled'}:
         s.add('cooked')
     s.discard('heat')
-    # USDA omits "raw" on some raw items
-    return frozenset(s) if s else frozenset({'raw'})
+    return frozenset(s) if s else frozenset({'raw'})  # USDA omits "raw" on some raw items
 
 
 def head(desc):
@@ -349,8 +349,7 @@ def same_food(ours, theirs):
 def score(ours, theirs):
     if state(ours) != state(theirs):
         return 0.0
-    a, b = tokens(ours) - STOP - STATE_WORDS, tokens(theirs) - \
-        STOP - STATE_WORDS
+    a, b = tokens(ours) - STOP - STATE_WORDS, tokens(theirs) - STOP - STATE_WORDS
     if not a or not b:
         return 0.0
     s = len(a & b) / len(a | b)
@@ -363,8 +362,13 @@ def step_match(source, sr_names):
     foundation = source.foundation_list()
     if not foundation:
         sys.exit('No Foundation foods were returned. Nothing to match.')
-    old = json.load(open(MAP_FILE)) if os.path.exists(MAP_FILE) else {}
+    old = read_json(MAP_FILE) if os.path.exists(MAP_FILE) else {}
     new = {}
+    for e in old.values():  # tidy names saved by earlier runs
+        if e.get('foundation'):
+            e['foundation'] = clean(e['foundation'])
+        for c in e.get('candidates', []):
+            c['description'] = clean(c['description'])
     for ndb, name, *_ in FOODS:
         fid = slug(name)
         prev = old.get(fid, {})
@@ -372,19 +376,15 @@ def step_match(source, sr_names):
             new[fid] = prev  # your decisions are kept across runs
             continue
         ours = sr_names[ndb]
-        ranked = sorted(((score(ours, f['description']), f)
-                        for f in foundation), key=lambda x: -x[0])
+        ranked = sorted(((score(ours, f['description']), f) for f in foundation), key=lambda x: -x[0])
         a = tokens(ours) - STOP - STATE_WORDS
-        def close(f): return len(
-            a & (tokens(f['description']) - STOP - STATE_WORDS)) / max(len(a), 1) >= 0.75
-        ranked = [(s, f) for s, f in ranked if s > 0 and close(f)
-                  and same_food(ours, f['description'])][:3]
+        close = lambda f: len(a & (tokens(f['description']) - STOP - STATE_WORDS)) / max(len(a), 1) >= 0.75
+        ranked = [(s, f) for s, f in ranked if s > 0 and close(f) and same_food(ours, f['description'])][:3]
         entry = {'name': name, 'srLegacy': ours,
                  'candidates': [{'fdcId': f['fdcId'], 'description': f['description'], 'score': round(s, 2)} for s, f in ranked]}
         sure = [f for s, f in ranked if confident(ours, f['description'])]
         if len(sure) == 1:
-            entry.update(
-                status='auto', fdcId=sure[0]['fdcId'], foundation=sure[0]['description'])
+            entry.update(status='auto', fdcId=sure[0]['fdcId'], foundation=sure[0]['description'])
         elif ranked:
             entry['status'] = 'review'
         else:
@@ -399,32 +399,28 @@ def step_match(source, sr_names):
         if len(fids) > 1:
             for fid in fids:
                 new[fid]['status'] = 'review'
-                new[fid].pop('fdcId')
-                new[fid].pop('foundation')
+                new[fid].pop('fdcId'); new[fid].pop('foundation')
     auto = sum(1 for e in new.values() if e.get('status') == 'auto')
     review = [fid for fid, e in new.items() if e.get('status') == 'review']
-    json.dump(new, open(MAP_FILE, 'w'), indent=1, ensure_ascii=False)
+    write_json(MAP_FILE, new, indent=1)
     kept = sum(1 for e in new.values() if e.get('status') == 'confirmed')
     print(f'match: {len(foundation)} Foundation foods; {auto} matched automatically, {kept} confirmed earlier, '
           f'{len(review)} need a look, {sum(1 for e in new.values() if e["status"] == "none")} have no Foundation match.')
     if review:
-        print(
-            f'  To go through them one by one, run:  {PY} scripts/update_from_fdc.py --step review')
+        print(f'  To go through them one by one, run:  {PY} scripts/update_from_fdc.py --step review')
 
 
 def step_fetch(source):
     if not os.path.exists(MAP_FILE):
         sys.exit('Run the match step first.')
-    mapping = json.load(open(MAP_FILE))
-    use = {e['fdcId'] for e in mapping.values() if e.get(
-        'status') in ('auto', 'confirmed') and e.get('fdcId')}
+    mapping = read_json(MAP_FILE)
+    use = {e['fdcId'] for e in mapping.values() if e.get('status') in ('auto', 'confirmed') and e.get('fdcId')}
     data = source.nutrients(use)
     for fid, e in mapping.items():
         if e.get('status') == 'confirmed' and e.get('foundation') and state(e['srLegacy']) != state(e['foundation']):
             print(f'  check: "{e["srLegacy"]}" is {"/".join(sorted(state(e["srLegacy"])))}, but the Foundation food you confirmed, '
                   f'"{e["foundation"]}", is {"/".join(sorted(state(e["foundation"])))}. Nutrient amounts differ a lot between raw, dry and cooked.')
-    cache = {'fetchedAt': time.strftime(
-        '%Y-%m-%d'), 'release': None, 'foods': {}}
+    cache = {'fetchedAt': time.strftime('%Y-%m-%d'), 'release': None, 'foods': {}}
     empty = 0
     for fdc_id in sorted(use):
         rec = data.get(fdc_id) or data.get(str(fdc_id))
@@ -432,13 +428,10 @@ def step_fetch(source):
         if not values:
             empty += 1
             continue
-        cache['foods'][str(fdc_id)] = {'published': rec.get(
-            'published', ''), 'per100': values}
-    dates = sorted(v['published']
-                   for v in cache['foods'].values() if v.get('published'))
-    cache['release'] = getattr(source, 'release_date', None) or (
-        dates[-1] if dates else None)
-    json.dump(cache, open(CACHE_FILE, 'w'), indent=1)
+        cache['foods'][str(fdc_id)] = {'published': rec.get('published', ''), 'per100': values}
+    dates = sorted(iso_date(v['published']) for v in cache['foods'].values() if v.get('published'))
+    cache['release'] = getattr(source, 'release_date', None) or (dates[-1] if dates else None)
+    write_json(CACHE_FILE, cache, indent=1)
     print(f'fetch: nutrient values for {len(cache["foods"])} Foundation foods'
           + (f' ({empty} returned no usable nutrients and were skipped)' if empty else '') + '.')
 
@@ -446,9 +439,8 @@ def step_fetch(source):
 def step_review():
     if not os.path.exists(MAP_FILE):
         sys.exit('Run the updater first so there are matches to review.')
-    mapping = json.load(open(MAP_FILE))
-    todo = [fid for fid, e in mapping.items() if e.get(
-        'status') == 'review' and e.get('candidates')]
+    mapping = read_json(MAP_FILE)
+    todo = [fid for fid, e in mapping.items() if e.get('status') == 'review' and e.get('candidates')]
     if not todo:
         print('Nothing to review.')
         return
@@ -472,14 +464,11 @@ def step_review():
             done += 1
         elif ans:
             c = e['candidates'][int(ans) - 1]
-            e.update(status='confirmed',
-                     fdcId=c['fdcId'], foundation=c['description'])
+            e.update(status='confirmed', fdcId=c['fdcId'], foundation=c['description'])
             done += 1
-        json.dump(mapping, open(MAP_FILE, 'w'), indent=1,
-                  ensure_ascii=False)  # saved after every answer
+        write_json(MAP_FILE, mapping, indent=1)  # saved after every answer
         print()
-    print(
-        f'Saved {done} decisions. Run the updater again to fetch values for confirmed foods:')
+    print(f'Saved {done} decisions. Run the updater again to fetch values for confirmed foods:')
     print(f'  {PY} scripts/update_from_fdc.py --api-key YOUR_KEY')
 
 
@@ -497,15 +486,11 @@ def sr_descriptions():
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     src = ap.add_mutually_exclusive_group()
-    src.add_argument('--api-key', default=os.environ.get('FDC_API_KEY'),
-                     help='FoodData Central API key (or set FDC_API_KEY)')
-    src.add_argument(
-        '--csv', help='Foundation Foods CSV download (.zip or folder)')
-    ap.add_argument(
-        '--step', choices=['match', 'review', 'fetch', 'build', 'all'], default='all')
+    src.add_argument('--api-key', default=os.environ.get('FDC_API_KEY'), help='FoodData Central API key (or set FDC_API_KEY)')
+    src.add_argument('--csv', help='Foundation Foods CSV download (.zip or folder)')
+    ap.add_argument('--step', choices=['match', 'review', 'fetch', 'build', 'all'], default='all')
     args = ap.parse_args()
 
     if args.step == 'review':
@@ -518,8 +503,7 @@ def main():
         else:
             key = args.api_key or 'DEMO_KEY'
             if key == 'DEMO_KEY':
-                print(
-                    'Using DEMO_KEY (30 requests an hour). A free personal key is at https://fdc.nal.usda.gov/api-key-signup')
+                print('Using DEMO_KEY (30 requests an hour). A free personal key is at https://fdc.nal.usda.gov/api-key-signup')
             source = Api(key)
         if args.step in ('match', 'all'):
             step_match(source, sr_descriptions())
@@ -528,8 +512,7 @@ def main():
         if isinstance(source, Api):
             print(f'({source.calls} API requests)')
     if args.step in ('build', 'all'):
-        subprocess.run([sys.executable, os.path.join(
-            HERE, 'build_foods.py')], check=True)
+        subprocess.run([sys.executable, os.path.join(HERE, 'build_foods.py')], check=True)
 
 
 if __name__ == '__main__':
