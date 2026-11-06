@@ -614,7 +614,7 @@ button.food-name:hover, a.food-name:hover { text-decoration: underline; text-und
   --scroll-thumb: color-mix(in oklab, var(--trace) 55%, var(--line));
   --scroll-thumb-hover: var(--trace);
   --select-bg: #3fb5aa;
-  --select-fg: #ffffff;
+  --select-fg: #000000;
 }
 
 /* Thin scrollbars in the site's teal, adjusting to light and dark mode
