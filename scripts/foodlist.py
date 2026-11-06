@@ -29,6 +29,9 @@ SERVINGS = {
     'SW': (5,   '5 g'),        # dried seaweed products
 }
 
+PLANT_MILK_TIP = ("Packaged drink: values depend on the producer. Most of the calcium, vitamin D and B12 "
+                  "is added by the maker and varies by brand, so check the carton. These are USDA's figures for one typical product.")
+
 SPROUT_TIP = "Raw sprouts carry a higher risk of food poisoning. FDA advises children, older adults and pregnant people to eat them cooked."
 
 FOODS = [
@@ -301,6 +304,12 @@ FOODS = [
     ('01019', 'Feta', 'Fresh', 'dairy', 'C', ['dairy', 'lactose'], None),
     ('01012', 'Cottage cheese', 'Creamed', 'dairy', 'CT', ['dairy', 'lactose'], None),
     ('01129', 'Eggs', 'Hard-boiled', 'egg', 'E', ['egg'], None),
+
+    # ---------------- Plant milks (packaged; values vary by brand) ----------------
+    ('16222', 'Soy milk', 'Unsweetened, fortified, varies by brand', 'plantmilk', 'M', ['soy'], PLANT_MILK_TIP),
+    ('14091', 'Almond milk', 'Unsweetened, varies by brand', 'plantmilk', 'M', ['treenut'], PLANT_MILK_TIP),
+    ('14171', 'Coconut milk (drink)', 'Sweetened, fortified, varies by brand', 'plantmilk', 'M', ['treenut'], PLANT_MILK_TIP),
+    ('14639', 'Rice milk', 'Unsweetened, varies by brand', 'plantmilk', 'M', [], PLANT_MILK_TIP),
 
     # ---------------- Poultry and meat (cooked, lean where available) ----------------
     ('05064', 'Chicken breast', 'Roasted, meat only', 'poultry', 'MT', [], None),

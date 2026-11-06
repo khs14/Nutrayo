@@ -108,7 +108,7 @@ for ndb, name, form, cat, skey, allergens, tip in FOODS:
 categories = {
     'vegetable': 'Vegetable', 'herb': 'Herb or flavouring', 'mushroom': 'Mushroom', 'seaweed': 'Seaweed',
     'fruit': 'Fruit', 'nut': 'Nut', 'seed': 'Seed', 'legume': 'Bean or legume', 'grain': 'Grain',
-    'dairy': 'Dairy', 'egg': 'Egg', 'poultry': 'Poultry', 'meat': 'Meat', 'fish': 'Fish', 'shellfish': 'Shellfish',
+    'dairy': 'Dairy', 'plantmilk': 'Plant milk', 'egg': 'Egg', 'poultry': 'Poultry', 'meat': 'Meat', 'fish': 'Fish', 'shellfish': 'Shellfish',
 }
 doc = {
     'source': {

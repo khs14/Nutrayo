@@ -19,13 +19,13 @@ Pushing to `main` on GitHub builds and publishes the site to GitHub Pages throug
 
 ## Pages
 
-| Page           | File            | What it shows                                                                                                                                                         |
-| -------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Table          | `index.html`    | The periodic table of 28 nutrients. Select a tile for its foods, ranked by % Daily Value per serving. Search a food to see what it provides, or browse foods by type. |
-| My foods       | `my-foods.html` | What your liked foods cover: food types you haven't liked anything from yet, nutrients covered and missing, and foods to fill each gap.                               |
-| Examples       | `examples.html` | Ingredient combinations and the nutrients each one covers.                                                                                                            |
-| Why we need it | `why.html`      | What each nutrient does, what happens without enough, and where the data comes from.                                                                                  |
-| Contact        | `contact.html`  | Developer details and an email link for feedback, questions and collaborations.                                                                                       |
+| Page | File | What it shows |
+|---|---|---|
+| Table | `index.html` | The periodic table of 28 nutrients. Select a tile for its foods, ranked by % Daily Value per serving. Search a food to see what it provides, or browse foods by type. |
+| My foods | `my-foods.html` | What your liked foods cover: food types you haven't liked anything from yet, nutrients covered and missing, and foods to fill each gap. |
+| Examples | `examples.html` | Ingredient combinations and the nutrients each one covers. |
+| Why we need it | `why.html` | What each nutrient does, what happens without enough, and where the data comes from. |
+| Contact | `contact.html` | Developer details and an email link for feedback, questions and collaborations. |
 
 Shared across pages: the diet and allergy bar (Vegetarian, Vegan, Lactose, Gluten and others), the **Saved** drawer listing liked and hidden foods with **Clear all** and **Undo**, and a footer with data sources.
 
@@ -43,7 +43,7 @@ src/
   styles.css                all styles: colour tokens, light and dark mode, layouts for every screen size
   data/
     nutrients.json          the 28 nutrients: symbol, table position, unit, Daily Value, role, shortage signs
-    foods.json              284 foods with nutrient amounts per 100 g (generated; see Data below)
+    foods.json              288 foods with nutrient amounts per 100 g (generated; see Data below)
     examples.json           the ingredient combinations on the Examples page
   lib/
     data.js                 loads and indexes the data; % Daily Value and amount helpers
@@ -72,14 +72,14 @@ docs/supabase-schema.sql    database tables matching supabase.example.js
 
 ## Data
 
-| What                    | Source                                                                                                                                                                                  |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nutrient amounts        | USDA FoodData Central: **Foundation Foods** where a food has been matched (marked † in the app), otherwise **SR Legacy**. Each food keeps its USDA record number.                       |
-| Biotin, iodine, omega-3 | NIH Office of Dietary Supplements fact sheets, where USDA has no value. Foods not listed there show "not measured".                                                                     |
-| Daily Values            | FDA Nutrition Facts label values. Omega-3 has no FDA value, so 1.6 g (the NIH adequate intake of ALA for men) is used.                                                                  |
-| Serving sizes           | FDA reference amounts, 21 CFR 101.12: 85 g vegetables, 140 g fresh fruit, 30 g nuts and seeds, 90 g cooked beans, 140 g cooked grains, 85 g cooked meat and fish, 4 g herbs, and so on. |
+| What | Source |
+|---|---|
+| Nutrient amounts | USDA FoodData Central: **Foundation Foods** where a food has been matched (marked † in the app), otherwise **SR Legacy**. Each food keeps its USDA record number. |
+| Biotin, iodine, omega-3 | NIH Office of Dietary Supplements fact sheets, where USDA has no value. Foods not listed there show "not measured". |
+| Daily Values | FDA Nutrition Facts label values. Omega-3 has no FDA value, so 1.6 g (the NIH adequate intake of ALA for men) is used. |
+| Serving sizes | FDA reference amounts, 21 CFR 101.12: 85 g vegetables, 140 g fresh fruit, 30 g nuts and seeds, 90 g cooked beans, 140 g cooked grains, 85 g cooked meat and fish, 4 g herbs, and so on. |
 
-A **rich source** gives 20% or more of the Daily Value in one serving; a **good source** gives 10–19%. These are FDA's "high in" and "good source of" thresholds. Produce, nuts and seeds use raw values; beans, grains, meat and fish use plain cooked values.
+A **rich source** gives 20% or more of the Daily Value in one serving; a **good source** gives 10–19%. These are FDA's "high in" and "good source of" thresholds. Produce, nuts and seeds use raw values; beans, grains, meat and fish use plain cooked values. Plant milks (soy, almond, coconut, rice) are packaged drinks whose values depend on the producer, and are labelled "varies by brand".
 
 ### Updating the data
 
