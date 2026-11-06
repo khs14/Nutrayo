@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%225%22 fill=%22%2323877F%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-family=%22sans-serif%22 font-weight=%22700%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22white%22%3ENy%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" rel="stylesheet" />
+  <title>Nutrayo</title>
+  <meta name="description" content="A periodic table of nutrients. See which raw foods give you each vitamin and mineral, filtered for allergies and diets." />
+</head>
+<body>
+  <header id="site-header" class="site-header"><!--header--></header>
+  <div id="filters" class="filters" aria-label="Diet and allergy choices"><!--filters--></div>
+  <main class="page page-table">
+    <div class="intro">
+      <h1>Every nutrient, and the raw foods that carry it</h1>
+      <form id="search-form" class="search" role="search">
+        <label for="food-search">Find a food</label>
+        <input id="food-search" type="search" list="food-options" placeholder="Try spinach, salmon, lentils" autocomplete="off" />
+        <datalist id="food-options"></datalist>
+        <p id="search-msg" class="search-msg" role="status"></p>
+      </form>
+    </div>
+    <div class="table-layout">
+      <div class="ptable-wrap">
+        <div class="ptable" id="ptable"></div>
+        <div class="group-key" id="group-key" aria-hidden="true"></div>
+      </div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><!--footer--></footer>
+  <script type="module" src="/src/pages/table.js"></script>
+</body>
+</html>

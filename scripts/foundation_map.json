@@ -1,0 +1,2549 @@
+{
+ "alfalfa-sprouts": {
+  "name": "Alfalfa sprouts",
+  "srLegacy": "Alfalfa seeds, sprouted, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "amaranth-leaves": {
+  "name": "Amaranth leaves",
+  "srLegacy": "Amaranth leaves, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "artichoke": {
+  "name": "Artichoke",
+  "srLegacy": "Artichokes, (globe or french), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "arugula": {
+  "name": "Arugula",
+  "srLegacy": "Arugula, raw",
+  "candidates": [
+   {
+    "fdcId": 2710822,
+    "description": "Arugula, baby, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710822,
+  "foundation": "Arugula, baby, raw"
+ },
+ "asparagus": {
+  "name": "Asparagus",
+  "srLegacy": "Asparagus, raw",
+  "candidates": [
+   {
+    "fdcId": 2710823,
+    "description": "Asparagus, green, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710823,
+  "foundation": "Asparagus, green, raw"
+ },
+ "bamboo-shoots": {
+  "name": "Bamboo shoots",
+  "srLegacy": "Bamboo shoots, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "green-beans": {
+  "name": "Green beans",
+  "srLegacy": "Beans, snap, green, raw",
+  "candidates": [
+   {
+    "fdcId": 2346400,
+    "description": "Beans, snap, green, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346400,
+  "foundation": "Beans, snap, green, raw"
+ },
+ "beet-greens": {
+  "name": "Beet greens",
+  "srLegacy": "Beet greens, raw",
+  "candidates": [
+   {
+    "fdcId": 2747653,
+    "description": "Beet greens, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2747653,
+  "foundation": "Beet greens, raw"
+ },
+ "beetroot": {
+  "name": "Beetroot",
+  "srLegacy": "Beets, raw",
+  "candidates": [
+   {
+    "fdcId": 2685576,
+    "description": "Beets, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685576,
+  "foundation": "Beets, raw"
+ },
+ "bok-choy": {
+  "name": "Bok choy",
+  "srLegacy": "Cabbage, chinese (pak-choi), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "broccoli": {
+  "name": "Broccoli",
+  "srLegacy": "Broccoli, raw",
+  "candidates": [
+   {
+    "fdcId": 747447,
+    "description": "Broccoli, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 747447,
+  "foundation": "Broccoli, raw"
+ },
+ "broccoli-rabe": {
+  "name": "Broccoli rabe",
+  "srLegacy": "Broccoli raab, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "chinese-broccoli-gai-lan": {
+  "name": "Chinese broccoli (gai lan)",
+  "srLegacy": "Broccoli, chinese, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "brussels-sprouts": {
+  "name": "Brussels sprouts",
+  "srLegacy": "Brussels sprouts, raw",
+  "candidates": [
+   {
+    "fdcId": 2685575,
+    "description": "Brussels sprouts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685575,
+  "foundation": "Brussels sprouts, raw"
+ },
+ "burdock-root": {
+  "name": "Burdock root",
+  "srLegacy": "Burdock root, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "green-cabbage": {
+  "name": "Green cabbage",
+  "srLegacy": "Cabbage, raw",
+  "candidates": [
+   {
+    "fdcId": 2346407,
+    "description": "Cabbage, green, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2346408,
+    "description": "Cabbage, red, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2685572,
+    "description": "Cabbage, bok choy, raw",
+    "score": 0.58
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2346407,
+  "foundation": "Cabbage, green, raw"
+ },
+ "red-cabbage": {
+  "name": "Red cabbage",
+  "srLegacy": "Cabbage, red, raw",
+  "candidates": [
+   {
+    "fdcId": 2346408,
+    "description": "Cabbage, red, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346408,
+  "foundation": "Cabbage, red, raw"
+ },
+ "savoy-cabbage": {
+  "name": "Savoy cabbage",
+  "srLegacy": "Cabbage, savoy, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "napa-cabbage": {
+  "name": "Napa cabbage",
+  "srLegacy": "Cabbage, chinese (pe-tsai), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "carrot": {
+  "name": "Carrot",
+  "srLegacy": "Carrots, raw",
+  "candidates": [
+   {
+    "fdcId": 2258586,
+    "description": "Carrots, mature, raw",
+    "score": 1.0
+   },
+   {
+    "fdcId": 2258587,
+    "description": "Carrots, baby, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2258586,
+  "foundation": "Carrots, mature, raw"
+ },
+ "cauliflower": {
+  "name": "Cauliflower",
+  "srLegacy": "Cauliflower, raw",
+  "candidates": [
+   {
+    "fdcId": 2685573,
+    "description": "Cauliflower, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685573,
+  "foundation": "Cauliflower, raw"
+ },
+ "celeriac": {
+  "name": "Celeriac",
+  "srLegacy": "Celeriac, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "celery": {
+  "name": "Celery",
+  "srLegacy": "Celery, raw",
+  "candidates": [
+   {
+    "fdcId": 2346405,
+    "description": "Celery, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346405,
+  "foundation": "Celery, raw"
+ },
+ "swiss-chard": {
+  "name": "Swiss chard",
+  "srLegacy": "Chard, swiss, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "chayote": {
+  "name": "Chayote",
+  "srLegacy": "Chayote, fruit, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "collard-greens": {
+  "name": "Collard greens",
+  "srLegacy": "Collards, raw",
+  "candidates": [
+   {
+    "fdcId": 2685574,
+    "description": "Collards, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685574,
+  "foundation": "Collards, raw"
+ },
+ "sweet-corn": {
+  "name": "Sweet corn",
+  "srLegacy": "Corn, sweet, yellow, raw",
+  "candidates": [
+   {
+    "fdcId": 2710826,
+    "description": "Corn, sweet, yellow and white kernels,  fresh, raw",
+    "score": 0.85
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710826,
+  "foundation": "Corn, sweet, yellow and white kernels,  fresh, raw"
+ },
+ "garden-cress": {
+  "name": "Garden cress",
+  "srLegacy": "Cress, garden, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "cucumber": {
+  "name": "Cucumber",
+  "srLegacy": "Cucumber, with peel, raw",
+  "candidates": [
+   {
+    "fdcId": 2346406,
+    "description": "Cucumber, with peel, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346406,
+  "foundation": "Cucumber, with peel, raw"
+ },
+ "dandelion-greens": {
+  "name": "Dandelion greens",
+  "srLegacy": "Dandelion greens, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "moringa-leaves": {
+  "name": "Moringa leaves",
+  "srLegacy": "Drumstick leaves, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "eggplant": {
+  "name": "Eggplant",
+  "srLegacy": "Eggplant, raw",
+  "candidates": [
+   {
+    "fdcId": 2685577,
+    "description": "Eggplant, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685577,
+  "foundation": "Eggplant, raw"
+ },
+ "curly-endive": {
+  "name": "Curly endive",
+  "srLegacy": "Endive, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "belgian-endive": {
+  "name": "Belgian endive",
+  "srLegacy": "Chicory, witloof, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "fennel-bulb": {
+  "name": "Fennel bulb",
+  "srLegacy": "Fennel, bulb, raw",
+  "candidates": [
+   {
+    "fdcId": 2747655,
+    "description": "Fennel, bulb, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2747655,
+  "foundation": "Fennel, bulb, raw"
+ },
+ "grape-leaves": {
+  "name": "Grape leaves",
+  "srLegacy": "Grape leaves, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "hearts-of-palm": {
+  "name": "Hearts of palm",
+  "srLegacy": "Hearts of palm, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "jerusalem-artichoke": {
+  "name": "Jerusalem artichoke",
+  "srLegacy": "Jerusalem-artichokes, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "kale": {
+  "name": "Kale",
+  "srLegacy": "Kale, raw",
+  "candidates": [
+   {
+    "fdcId": 323505,
+    "description": "Kale, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 323505,
+  "foundation": "Kale, raw"
+ },
+ "kohlrabi": {
+  "name": "Kohlrabi",
+  "srLegacy": "Kohlrabi, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "leeks": {
+  "name": "Leeks",
+  "srLegacy": "Leeks, (bulb and lower leaf-portion), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "lentil-sprouts": {
+  "name": "Lentil sprouts",
+  "srLegacy": "Lentils, sprouted, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "butterhead-lettuce": {
+  "name": "Butterhead lettuce",
+  "srLegacy": "Lettuce, butterhead (includes boston and bibb types), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "romaine-lettuce": {
+  "name": "Romaine lettuce",
+  "srLegacy": "Lettuce, cos or romaine, raw",
+  "candidates": [
+   {
+    "fdcId": 746769,
+    "description": "Lettuce, cos or romaine, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746769,
+  "foundation": "Lettuce, cos or romaine, raw"
+ },
+ "green-leaf-lettuce": {
+  "name": "Green leaf lettuce",
+  "srLegacy": "Lettuce, green leaf, raw",
+  "candidates": [
+   {
+    "fdcId": 2346391,
+    "description": "Lettuce, leaf, green, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346391,
+  "foundation": "Lettuce, leaf, green, raw"
+ },
+ "iceberg-lettuce": {
+  "name": "Iceberg lettuce",
+  "srLegacy": "Lettuce, iceberg (includes crisphead types), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "lotus-root": {
+  "name": "Lotus root",
+  "srLegacy": "Lotus root, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "mung-bean-sprouts": {
+  "name": "Mung bean sprouts",
+  "srLegacy": "Mung beans, mature seeds, sprouted, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "mustard-greens": {
+  "name": "Mustard greens",
+  "srLegacy": "Mustard greens, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "nopales-cactus-pads": {
+  "name": "Nopales (cactus pads)",
+  "srLegacy": "Nopales, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "okra": {
+  "name": "Okra",
+  "srLegacy": "Okra, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "onion": {
+  "name": "Onion",
+  "srLegacy": "Onions, raw",
+  "candidates": [
+   {
+    "fdcId": 790577,
+    "description": "Onions, red, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 1104962,
+    "description": "Onions, white, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 790646,
+    "description": "Onions, yellow, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 790646,
+  "foundation": "Onions, yellow, raw"
+ },
+ "spring-onions": {
+  "name": "Spring onions",
+  "srLegacy": "Onions, spring or scallions (includes tops and bulb), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "parsnip": {
+  "name": "Parsnip",
+  "srLegacy": "Parsnips, raw",
+  "candidates": [
+   {
+    "fdcId": 2747659,
+    "description": "Parsnips, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2747659,
+  "foundation": "Parsnips, raw"
+ },
+ "green-peas": {
+  "name": "Green peas",
+  "srLegacy": "Peas, green, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "snow-peas": {
+  "name": "Snow peas",
+  "srLegacy": "Peas, edible-podded, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "green-bell-pepper": {
+  "name": "Green bell pepper",
+  "srLegacy": "Peppers, sweet, green, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "red-bell-pepper": {
+  "name": "Red bell pepper",
+  "srLegacy": "Peppers, sweet, red, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "yellow-bell-pepper": {
+  "name": "Yellow bell pepper",
+  "srLegacy": "Peppers, sweet, yellow, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "potato": {
+  "name": "Potato",
+  "srLegacy": "Potatoes, baked, flesh and skin, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "sweet-potato": {
+  "name": "Sweet potato",
+  "srLegacy": "Sweet potato, cooked, baked in skin, flesh, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "yam": {
+  "name": "Yam",
+  "srLegacy": "Yam, cooked, boiled, drained, or baked, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "pumpkin": {
+  "name": "Pumpkin",
+  "srLegacy": "Pumpkin, raw",
+  "candidates": [
+   {
+    "fdcId": 2515380,
+    "description": "Seeds, pumpkin seeds (pepitas), raw",
+    "score": 0.5
+   },
+   {
+    "fdcId": 2727578,
+    "description": "Squash, pie pumpkin, peeled, seeded, raw",
+    "score": 0.2
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2727578,
+  "foundation": "Squash, pie pumpkin, peeled, seeded, raw"
+ },
+ "purslane": {
+  "name": "Purslane",
+  "srLegacy": "Purslane, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "radicchio": {
+  "name": "Radicchio",
+  "srLegacy": "Radicchio, raw",
+  "candidates": [
+   {
+    "fdcId": 2747664,
+    "description": "Radicchio, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2747664,
+  "foundation": "Radicchio, raw"
+ },
+ "radish": {
+  "name": "Radish",
+  "srLegacy": "Radishes, raw",
+  "candidates": [
+   {
+    "fdcId": 2747665,
+    "description": "Radishes, red, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2747665,
+  "foundation": "Radishes, red, raw"
+ },
+ "daikon-radish": {
+  "name": "Daikon radish",
+  "srLegacy": "Radishes, oriental, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "rutabaga": {
+  "name": "Rutabaga",
+  "srLegacy": "Rutabagas, raw",
+  "candidates": [
+   {
+    "fdcId": 2727580,
+    "description": "Rutabaga, peeled, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2727580,
+  "foundation": "Rutabaga, peeled, raw"
+ },
+ "spinach": {
+  "name": "Spinach",
+  "srLegacy": "Spinach, raw",
+  "candidates": [
+   {
+    "fdcId": 1999633,
+    "description": "Spinach, mature",
+    "score": 1.0
+   },
+   {
+    "fdcId": 1999632,
+    "description": "Spinach, baby",
+    "score": 0.75
+   }
+  ],
+  "status": "auto",
+  "fdcId": 1999633,
+  "foundation": "Spinach, mature"
+ },
+ "zucchini": {
+  "name": "Zucchini",
+  "srLegacy": "Squash, summer, zucchini, includes skin, raw",
+  "candidates": [
+   {
+    "fdcId": 2685568,
+    "description": "Squash, summer, green, zucchini, includes skin, raw",
+    "score": 1.0
+   },
+   {
+    "fdcId": 2685569,
+    "description": "Squash, summer, yellow, includes skin, raw",
+    "score": 0.85
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2685568,
+  "foundation": "Squash, summer, green, zucchini, includes skin, raw"
+ },
+ "acorn-squash": {
+  "name": "Acorn squash",
+  "srLegacy": "Squash, winter, acorn, raw",
+  "candidates": [
+   {
+    "fdcId": 2685571,
+    "description": "Squash, winter, acorn, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685571,
+  "foundation": "Squash, winter, acorn, raw"
+ },
+ "butternut-squash": {
+  "name": "Butternut squash",
+  "srLegacy": "Squash, winter, butternut, raw",
+  "candidates": [
+   {
+    "fdcId": 2685570,
+    "description": "Squash, winter, butternut, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2685570,
+  "foundation": "Squash, winter, butternut, raw"
+ },
+ "spaghetti-squash": {
+  "name": "Spaghetti squash",
+  "srLegacy": "Squash, winter, spaghetti, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "tomatillo": {
+  "name": "Tomatillo",
+  "srLegacy": "Tomatillos, raw",
+  "candidates": [
+   {
+    "fdcId": 2727582,
+    "description": "Tomatillos, dehusked, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2727582,
+  "foundation": "Tomatillos, dehusked, raw"
+ },
+ "tomato": {
+  "name": "Tomato",
+  "srLegacy": "Tomatoes, red, ripe, raw, year round average",
+  "candidates": [],
+  "status": "none"
+ },
+ "turnip": {
+  "name": "Turnip",
+  "srLegacy": "Turnips, raw",
+  "candidates": [
+   {
+    "fdcId": 2747674,
+    "description": "Turnips, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2747674,
+  "foundation": "Turnips, raw"
+ },
+ "turnip-greens": {
+  "name": "Turnip greens",
+  "srLegacy": "Turnip greens, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "water-chestnuts": {
+  "name": "Water chestnuts",
+  "srLegacy": "Waterchestnuts, chinese, (matai), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "watercress": {
+  "name": "Watercress",
+  "srLegacy": "Watercress, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "jicama": {
+  "name": "Jicama",
+  "srLegacy": "Yambean (jicama), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "edamame": {
+  "name": "Edamame",
+  "srLegacy": "Edamame, frozen, prepared",
+  "candidates": [
+   {
+    "fdcId": 2758981,
+    "description": "Edamame, frozen, prepared",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2758981,
+  "foundation": "Edamame, frozen, prepared"
+ },
+ "garlic": {
+  "name": "Garlic",
+  "srLegacy": "Garlic, raw",
+  "candidates": [
+   {
+    "fdcId": 1104647,
+    "description": "Garlic, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 1104647,
+  "foundation": "Garlic, raw"
+ },
+ "ginger-root": {
+  "name": "Ginger root",
+  "srLegacy": "Ginger root, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "shallots": {
+  "name": "Shallots",
+  "srLegacy": "Shallots, raw",
+  "candidates": [
+   {
+    "fdcId": 2727586,
+    "description": "Shallots, bulb, peeled, root removed, raw",
+    "score": 0.45
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2727586,
+  "foundation": "Shallots, bulb, peeled, root removed, raw"
+ },
+ "jalape-o": {
+  "name": "Jalapeño",
+  "srLegacy": "Peppers, jalapeno, raw",
+  "candidates": [
+   {
+    "fdcId": 2747661,
+    "description": "Peppers, jalapeno, seeded, raw",
+    "score": 0.92
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2747661,
+  "foundation": "Peppers, jalapeno, seeded, raw"
+ },
+ "lemongrass": {
+  "name": "Lemongrass",
+  "srLegacy": "Lemon grass (citronella), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "chives": {
+  "name": "Chives",
+  "srLegacy": "Chives, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "cilantro-coriander-leaves": {
+  "name": "Cilantro (coriander leaves)",
+  "srLegacy": "Coriander (cilantro) leaves, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "parsley": {
+  "name": "Parsley",
+  "srLegacy": "Parsley, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "basil": {
+  "name": "Basil",
+  "srLegacy": "Basil, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "dill": {
+  "name": "Dill",
+  "srLegacy": "Dill weed, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "spearmint": {
+  "name": "Spearmint",
+  "srLegacy": "Spearmint, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "peppermint": {
+  "name": "Peppermint",
+  "srLegacy": "Peppermint, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "thyme": {
+  "name": "Thyme",
+  "srLegacy": "Thyme, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "rosemary": {
+  "name": "Rosemary",
+  "srLegacy": "Rosemary, fresh",
+  "candidates": [],
+  "status": "none"
+ },
+ "wasabi-root": {
+  "name": "Wasabi root",
+  "srLegacy": "Wasabi, root, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "white-button-mushrooms": {
+  "name": "White button mushrooms",
+  "srLegacy": "Mushrooms, white, raw",
+  "candidates": [
+   {
+    "fdcId": 1999629,
+    "description": "Mushrooms, white button",
+    "score": 0.92
+   }
+  ],
+  "status": "auto",
+  "fdcId": 1999629,
+  "foundation": "Mushrooms, white button"
+ },
+ "white-mushrooms-uv-exposed": {
+  "name": "White mushrooms, UV-exposed",
+  "srLegacy": "Mushroom, white, exposed to ultraviolet light, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "cremini-mushrooms": {
+  "name": "Cremini mushrooms",
+  "srLegacy": "Mushrooms, brown, italian, or crimini, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "portabella-mushrooms": {
+  "name": "Portabella mushrooms",
+  "srLegacy": "Mushrooms, portabella, raw",
+  "candidates": [
+   {
+    "fdcId": 2003598,
+    "description": "Mushroom, portabella",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2003598,
+  "foundation": "Mushroom, portabella"
+ },
+ "shiitake-mushrooms": {
+  "name": "Shiitake mushrooms",
+  "srLegacy": "Mushrooms, shiitake, raw",
+  "candidates": [
+   {
+    "fdcId": 1999628,
+    "description": "Mushrooms, shiitake",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 1999628,
+  "foundation": "Mushrooms, shiitake"
+ },
+ "oyster-mushrooms": {
+  "name": "Oyster mushrooms",
+  "srLegacy": "Mushrooms, oyster, raw",
+  "candidates": [
+   {
+    "fdcId": 1999627,
+    "description": "Mushroom, oyster",
+    "score": 1.0
+   },
+   {
+    "fdcId": 2003599,
+    "description": "Mushroom, king oyster",
+    "score": 0.92
+   }
+  ],
+  "status": "auto",
+  "fdcId": 1999627,
+  "foundation": "Mushroom, oyster"
+ },
+ "maitake-mushrooms": {
+  "name": "Maitake mushrooms",
+  "srLegacy": "Mushrooms, maitake, raw",
+  "candidates": [
+   {
+    "fdcId": 2003602,
+    "description": "Mushroom, maitake",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2003602,
+  "foundation": "Mushroom, maitake"
+ },
+ "enoki-mushrooms": {
+  "name": "Enoki mushrooms",
+  "srLegacy": "Mushrooms, enoki, raw",
+  "candidates": [
+   {
+    "fdcId": 2003600,
+    "description": "Mushroom, enoki",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2003600,
+  "foundation": "Mushroom, enoki"
+ },
+ "chanterelle-mushrooms": {
+  "name": "Chanterelle mushrooms",
+  "srLegacy": "Mushrooms, Chanterelle, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "morel-mushrooms": {
+  "name": "Morel mushrooms",
+  "srLegacy": "Mushrooms, morel, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "laver-nori": {
+  "name": "Laver (nori)",
+  "srLegacy": "Seaweed, laver, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "kelp": {
+  "name": "Kelp",
+  "srLegacy": "Seaweed, kelp, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "wakame": {
+  "name": "Wakame",
+  "srLegacy": "Seaweed, wakame, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "spirulina": {
+  "name": "Spirulina",
+  "srLegacy": "Seaweed, spirulina, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "acerola-cherry": {
+  "name": "Acerola cherry",
+  "srLegacy": "Acerola, (west indian cherry), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "apple": {
+  "name": "Apple",
+  "srLegacy": "Apples, raw, with skin",
+  "candidates": [
+   {
+    "fdcId": 1750340,
+    "description": "Apples, fuji, with skin, raw",
+    "score": 0.92
+   },
+   {
+    "fdcId": 1750341,
+    "description": "Apples, gala, with skin, raw",
+    "score": 0.92
+   },
+   {
+    "fdcId": 1750343,
+    "description": "Apples, honeycrisp, with skin, raw",
+    "score": 0.92
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 1750341,
+  "foundation": "Apples, gala, with skin, raw"
+ },
+ "apricot": {
+  "name": "Apricot",
+  "srLegacy": "Apricots, raw",
+  "candidates": [
+   {
+    "fdcId": 2710815,
+    "description": "Apricot, with skin, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710815,
+  "foundation": "Apricot, with skin, raw"
+ },
+ "avocado": {
+  "name": "Avocado",
+  "srLegacy": "Avocados, raw, all commercial varieties",
+  "candidates": [
+   {
+    "fdcId": 2710824,
+    "description": "Avocado, Hass, peeled, raw",
+    "score": 0.58
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710824,
+  "foundation": "Avocado, Hass, peeled, raw"
+ },
+ "banana": {
+  "name": "Banana",
+  "srLegacy": "Bananas, raw",
+  "candidates": [
+   {
+    "fdcId": 1105073,
+    "description": "Bananas, overripe, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 1105314,
+    "description": "Bananas, ripe and slightly ripe, raw",
+    "score": 0.58
+   },
+   {
+    "fdcId": 2747660,
+    "description": "Peppers, banana or Hungarian wax, seeded, raw",
+    "score": 0.2
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 1105314,
+  "foundation": "Bananas, ripe and slightly ripe, raw"
+ },
+ "blackberries": {
+  "name": "Blackberries",
+  "srLegacy": "Blackberries, raw",
+  "candidates": [
+   {
+    "fdcId": 2727581,
+    "description": "Blackberries, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2727581,
+  "foundation": "Blackberries, raw"
+ },
+ "blueberries": {
+  "name": "Blueberries",
+  "srLegacy": "Blueberries, raw",
+  "candidates": [
+   {
+    "fdcId": 2346411,
+    "description": "Blueberries, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346411,
+  "foundation": "Blueberries, raw"
+ },
+ "starfruit": {
+  "name": "Starfruit",
+  "srLegacy": "Carambola, (starfruit), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "cherimoya": {
+  "name": "Cherimoya",
+  "srLegacy": "Cherimoya, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "sweet-cherries": {
+  "name": "Sweet cherries",
+  "srLegacy": "Cherries, sweet, raw",
+  "candidates": [
+   {
+    "fdcId": 2346399,
+    "description": "Cherries, sweet, dark red, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2346399,
+  "foundation": "Cherries, sweet, dark red, raw"
+ },
+ "sour-cherries": {
+  "name": "Sour cherries",
+  "srLegacy": "Cherries, sour, red, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "clementine": {
+  "name": "Clementine",
+  "srLegacy": "Clementines, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "cranberries": {
+  "name": "Cranberries",
+  "srLegacy": "Cranberries, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "blackcurrants": {
+  "name": "Blackcurrants",
+  "srLegacy": "Currants, european black, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "durian": {
+  "name": "Durian",
+  "srLegacy": "Durian, raw or frozen",
+  "candidates": [],
+  "status": "none"
+ },
+ "elderberries": {
+  "name": "Elderberries",
+  "srLegacy": "Elderberries, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "feijoa": {
+  "name": "Feijoa",
+  "srLegacy": "Feijoa, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "figs": {
+  "name": "Figs",
+  "srLegacy": "Figs, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "gooseberries": {
+  "name": "Gooseberries",
+  "srLegacy": "Gooseberries, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "grapefruit": {
+  "name": "Grapefruit",
+  "srLegacy": "Grapefruit, raw, pink and red and white, all areas",
+  "candidates": [],
+  "status": "none"
+ },
+ "grapes": {
+  "name": "Grapes",
+  "srLegacy": "Grapes, red or green (European type, such as Thompson seedless), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "guava": {
+  "name": "Guava",
+  "srLegacy": "Guavas, common, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "jackfruit": {
+  "name": "Jackfruit",
+  "srLegacy": "Jackfruit, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "jujube": {
+  "name": "Jujube",
+  "srLegacy": "Jujube, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "kiwi-green": {
+  "name": "Kiwi, green",
+  "srLegacy": "Kiwifruit, green, raw",
+  "candidates": [
+   {
+    "fdcId": 327046,
+    "description": "Kiwifruit, green, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 327046,
+  "foundation": "Kiwifruit, green, raw"
+ },
+ "kiwi-gold": {
+  "name": "Kiwi, gold",
+  "srLegacy": "Kiwifruit, ZESPRI SunGold, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "kumquat": {
+  "name": "Kumquat",
+  "srLegacy": "Kumquats, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "lemon": {
+  "name": "Lemon",
+  "srLegacy": "Lemons, raw, without peel",
+  "candidates": [],
+  "status": "none"
+ },
+ "lime": {
+  "name": "Lime",
+  "srLegacy": "Limes, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "lychee": {
+  "name": "Lychee",
+  "srLegacy": "Litchis, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "longan": {
+  "name": "Longan",
+  "srLegacy": "Longans, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "mango": {
+  "name": "Mango",
+  "srLegacy": "Mangos, raw",
+  "candidates": [
+   {
+    "fdcId": 2710834,
+    "description": "Mango, Ataulfo, peeled, raw",
+    "score": 0.58
+   },
+   {
+    "fdcId": 2710833,
+    "description": "Mango, Tommy Atkins, peeled, raw",
+    "score": 0.5
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710833,
+  "foundation": "Mango, Tommy Atkins, peeled, raw"
+ },
+ "cantaloupe": {
+  "name": "Cantaloupe",
+  "srLegacy": "Melons, cantaloupe, raw",
+  "candidates": [
+   {
+    "fdcId": 746770,
+    "description": "Melons, cantaloupe, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746770,
+  "foundation": "Melons, cantaloupe, raw"
+ },
+ "honeydew-melon": {
+  "name": "Honeydew melon",
+  "srLegacy": "Melons, honeydew, raw",
+  "candidates": [
+   {
+    "fdcId": 2710816,
+    "description": "Melons, honeydew, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2710816,
+  "foundation": "Melons, honeydew, raw"
+ },
+ "mulberries": {
+  "name": "Mulberries",
+  "srLegacy": "Mulberries, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "nectarine": {
+  "name": "Nectarine",
+  "srLegacy": "Nectarines, raw",
+  "candidates": [
+   {
+    "fdcId": 327357,
+    "description": "Nectarines, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 327357,
+  "foundation": "Nectarines, raw"
+ },
+ "orange": {
+  "name": "Orange",
+  "srLegacy": "Oranges, raw, all commercial varieties",
+  "candidates": [
+   {
+    "fdcId": 746771,
+    "description": "Oranges, raw, navels",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2258591,
+    "description": "Peppers, bell, orange, raw",
+    "score": 0.33
+   },
+   {
+    "fdcId": 2346404,
+    "description": "Sweet potatoes, orange flesh, without skin, raw",
+    "score": 0.2
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 746771,
+  "foundation": "Oranges, raw, navels"
+ },
+ "papaya": {
+  "name": "Papaya",
+  "srLegacy": "Papayas, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "passion-fruit": {
+  "name": "Passion fruit",
+  "srLegacy": "Passion-fruit, (granadilla), purple, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "peach": {
+  "name": "Peach",
+  "srLegacy": "Peaches, yellow, raw",
+  "candidates": [
+   {
+    "fdcId": 325430,
+    "description": "Peaches, yellow, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 325430,
+  "foundation": "Peaches, yellow, raw"
+ },
+ "pear": {
+  "name": "Pear",
+  "srLegacy": "Pears, raw",
+  "candidates": [
+   {
+    "fdcId": 746773,
+    "description": "Pears, raw, bartlett",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2710836,
+    "description": "Pear, Anjou, green, with skin, raw",
+    "score": 0.5
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 746773,
+  "foundation": "Pears, raw, bartlett"
+ },
+ "asian-pear": {
+  "name": "Asian pear",
+  "srLegacy": "Pears, asian, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "persimmon": {
+  "name": "Persimmon",
+  "srLegacy": "Persimmons, japanese, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "pineapple": {
+  "name": "Pineapple",
+  "srLegacy": "Pineapple, raw, all varieties",
+  "candidates": [
+   {
+    "fdcId": 2346398,
+    "description": "Pineapple, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346398,
+  "foundation": "Pineapple, raw"
+ },
+ "plantain": {
+  "name": "Plantain",
+  "srLegacy": "Plantains, raw",
+  "candidates": [
+   {
+    "fdcId": 2710843,
+    "description": "Plantains, overripe, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2710817,
+    "description": "Plantains, ripe, raw",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2710818,
+    "description": "Plantains, underripe, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710817,
+  "foundation": "Plantains, ripe, raw"
+ },
+ "plum": {
+  "name": "Plum",
+  "srLegacy": "Plums, raw",
+  "candidates": [
+   {
+    "fdcId": 2710837,
+    "description": "Plum, black, with skin, raw",
+    "score": 0.58
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2710837,
+  "foundation": "Plum, black, with skin, raw"
+ },
+ "pomegranate": {
+  "name": "Pomegranate",
+  "srLegacy": "Pomegranates, raw",
+  "candidates": [
+   {
+    "fdcId": 2727588,
+    "description": "Juice, pomegranate, from concentrate, shelf-stable",
+    "score": 0.2
+   }
+  ],
+  "status": "rejected"
+ },
+ "prickly-pear": {
+  "name": "Prickly pear",
+  "srLegacy": "Prickly pears, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "pomelo": {
+  "name": "Pomelo",
+  "srLegacy": "Pummelo, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "quince": {
+  "name": "Quince",
+  "srLegacy": "Quinces, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "raspberries": {
+  "name": "Raspberries",
+  "srLegacy": "Raspberries, raw",
+  "candidates": [
+   {
+    "fdcId": 2346410,
+    "description": "Raspberries, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346410,
+  "foundation": "Raspberries, raw"
+ },
+ "rhubarb": {
+  "name": "Rhubarb",
+  "srLegacy": "Rhubarb, raw",
+  "candidates": [
+   {
+    "fdcId": 2758975,
+    "description": "Rhubarb, stalk, raw",
+    "score": 0.75
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2758975,
+  "foundation": "Rhubarb, stalk, raw"
+ },
+ "sapodilla": {
+  "name": "Sapodilla",
+  "srLegacy": "Sapodilla, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "mamey-sapote": {
+  "name": "Mamey sapote",
+  "srLegacy": "Sapote, mamey, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "soursop": {
+  "name": "Soursop",
+  "srLegacy": "Soursop, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "strawberries": {
+  "name": "Strawberries",
+  "srLegacy": "Strawberries, raw",
+  "candidates": [
+   {
+    "fdcId": 2346409,
+    "description": "Strawberries, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346409,
+  "foundation": "Strawberries, raw"
+ },
+ "tamarind": {
+  "name": "Tamarind",
+  "srLegacy": "Tamarinds, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "tangerine": {
+  "name": "Tangerine",
+  "srLegacy": "Tangerines, (mandarin oranges), raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "watermelon": {
+  "name": "Watermelon",
+  "srLegacy": "Watermelon, raw",
+  "candidates": [
+   {
+    "fdcId": 2747675,
+    "description": "Watermelon, seedless, flesh only, raw",
+    "score": 0.58
+   },
+   {
+    "fdcId": 2747676,
+    "description": "Watermelon, seedless, rind only, raw",
+    "score": 0.58
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2747675,
+  "foundation": "Watermelon, seedless, flesh only, raw"
+ },
+ "medjool-dates": {
+  "name": "Medjool dates",
+  "srLegacy": "Dates, medjool",
+  "candidates": [],
+  "status": "none"
+ },
+ "dried-figs": {
+  "name": "Dried figs",
+  "srLegacy": "Figs, dried, uncooked",
+  "candidates": [
+   {
+    "fdcId": 746768,
+    "description": "Figs, dried, uncooked",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746768,
+  "foundation": "Figs, dried, uncooked"
+ },
+ "raisins": {
+  "name": "Raisins",
+  "srLegacy": "Raisins, seedless",
+  "candidates": [
+   {
+    "fdcId": 2758980,
+    "description": "Raisins, dark, seedless",
+    "score": 0.92
+   },
+   {
+    "fdcId": 2758979,
+    "description": "Raisins, golden, seedless",
+    "score": 0.92
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2758980,
+  "foundation": "Raisins, dark, seedless"
+ },
+ "prunes": {
+  "name": "Prunes",
+  "srLegacy": "Plums, dried (prunes), uncooked",
+  "candidates": [
+   {
+    "fdcId": 2758978,
+    "description": "Plums, dried (prunes), uncooked",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2758978,
+  "foundation": "Plums, dried (prunes), uncooked"
+ },
+ "dried-apricots": {
+  "name": "Dried apricots",
+  "srLegacy": "Apricots, dried, sulfured, uncooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "black-olives": {
+  "name": "Black olives",
+  "srLegacy": "Olives, ripe, canned (small-extra large)",
+  "candidates": [],
+  "status": "none"
+ },
+ "almonds": {
+  "name": "Almonds",
+  "srLegacy": "Nuts, almonds",
+  "candidates": [
+   {
+    "fdcId": 2346393,
+    "description": "Nuts, almonds, whole, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346393,
+  "foundation": "Nuts, almonds, whole, raw"
+ },
+ "brazil-nuts": {
+  "name": "Brazil nuts",
+  "srLegacy": "Nuts, brazilnuts, dried, unblanched",
+  "candidates": [],
+  "status": "none"
+ },
+ "cashews": {
+  "name": "Cashews",
+  "srLegacy": "Nuts, cashew nuts, raw",
+  "candidates": [
+   {
+    "fdcId": 2515374,
+    "description": "Nuts, cashew nuts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2515374,
+  "foundation": "Nuts, cashew nuts, raw"
+ },
+ "chestnuts": {
+  "name": "Chestnuts",
+  "srLegacy": "Nuts, chestnuts, european, raw, peeled",
+  "candidates": [],
+  "status": "none"
+ },
+ "hazelnuts": {
+  "name": "Hazelnuts",
+  "srLegacy": "Nuts, hazelnuts or filberts",
+  "candidates": [
+   {
+    "fdcId": 2515375,
+    "description": "Nuts, hazelnuts or filberts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2515375,
+  "foundation": "Nuts, hazelnuts or filberts, raw"
+ },
+ "macadamia-nuts": {
+  "name": "Macadamia nuts",
+  "srLegacy": "Nuts, macadamia nuts, raw",
+  "candidates": [
+   {
+    "fdcId": 2515378,
+    "description": "Nuts, macadamia nuts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2515378,
+  "foundation": "Nuts, macadamia nuts, raw"
+ },
+ "pecans": {
+  "name": "Pecans",
+  "srLegacy": "Nuts, pecans",
+  "candidates": [
+   {
+    "fdcId": 2346395,
+    "description": "Nuts, pecans, halves, raw",
+    "score": 0.92
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346395,
+  "foundation": "Nuts, pecans, halves, raw"
+ },
+ "pine-nuts": {
+  "name": "Pine nuts",
+  "srLegacy": "Nuts, pine nuts, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "pistachios": {
+  "name": "Pistachios",
+  "srLegacy": "Nuts, pistachio nuts, raw",
+  "candidates": [
+   {
+    "fdcId": 2515379,
+    "description": "Nuts, pistachio nuts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2515379,
+  "foundation": "Nuts, pistachio nuts, raw"
+ },
+ "walnuts": {
+  "name": "Walnuts",
+  "srLegacy": "Nuts, walnuts, english",
+  "candidates": [
+   {
+    "fdcId": 2346394,
+    "description": "Nuts, walnuts, English, halves, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2346394,
+  "foundation": "Nuts, walnuts, English, halves, raw"
+ },
+ "black-walnuts": {
+  "name": "Black walnuts",
+  "srLegacy": "Nuts, walnuts, black, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "coconut-meat": {
+  "name": "Coconut meat",
+  "srLegacy": "Nuts, coconut meat, raw",
+  "candidates": [],
+  "status": "none"
+ },
+ "peanuts": {
+  "name": "Peanuts",
+  "srLegacy": "Peanuts, all types, raw",
+  "candidates": [
+   {
+    "fdcId": 2515376,
+    "description": "Peanuts, raw",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 2515376,
+  "foundation": "Peanuts, raw"
+ },
+ "chia-seeds": {
+  "name": "Chia seeds",
+  "srLegacy": "Seeds, chia seeds, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "flaxseeds": {
+  "name": "Flaxseeds",
+  "srLegacy": "Seeds, flaxseed",
+  "candidates": [
+   {
+    "fdcId": 2262075,
+    "description": "Flaxseed, ground",
+    "score": 0.5
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2262075,
+  "foundation": "Flaxseed, ground"
+ },
+ "hemp-seeds": {
+  "name": "Hemp seeds",
+  "srLegacy": "Seeds, hemp seed, hulled",
+  "candidates": [],
+  "status": "none"
+ },
+ "pumpkin-seeds": {
+  "name": "Pumpkin seeds",
+  "srLegacy": "Seeds, pumpkin and squash seed kernels, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "sesame-seeds": {
+  "name": "Sesame seeds",
+  "srLegacy": "Seeds, sesame seeds, whole, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "sunflower-seeds": {
+  "name": "Sunflower seeds",
+  "srLegacy": "Seeds, sunflower seed kernels, dried",
+  "candidates": [],
+  "status": "none"
+ },
+ "adzuki-beans": {
+  "name": "Adzuki beans",
+  "srLegacy": "Beans, adzuki, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "black-beans": {
+  "name": "Black beans",
+  "srLegacy": "Beans, black, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "black-eyed-peas": {
+  "name": "Black-eyed peas",
+  "srLegacy": "Cowpeas, common (blackeyes, crowder, southern), mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "chickpeas": {
+  "name": "Chickpeas",
+  "srLegacy": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "fava-beans": {
+  "name": "Fava beans",
+  "srLegacy": "Broadbeans (fava beans), mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "great-northern-beans": {
+  "name": "Great northern beans",
+  "srLegacy": "Beans, great northern, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "red-kidney-beans": {
+  "name": "Red kidney beans",
+  "srLegacy": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "lentils": {
+  "name": "Lentils",
+  "srLegacy": "Lentils, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "lima-beans": {
+  "name": "Lima beans",
+  "srLegacy": "Lima beans, large, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "lupini-beans": {
+  "name": "Lupini beans",
+  "srLegacy": "Lupins, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "mung-beans": {
+  "name": "Mung beans",
+  "srLegacy": "Mung beans, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "navy-beans": {
+  "name": "Navy beans",
+  "srLegacy": "Beans, navy, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "pigeon-peas": {
+  "name": "Pigeon peas",
+  "srLegacy": "Pigeon peas (red gram), mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "pinto-beans": {
+  "name": "Pinto beans",
+  "srLegacy": "Beans, pinto, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "soybeans": {
+  "name": "Soybeans",
+  "srLegacy": "Soybeans, mature cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "split-peas": {
+  "name": "Split peas",
+  "srLegacy": "Peas, split, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "urad-dal-black-gram": {
+  "name": "Urad dal (black gram)",
+  "srLegacy": "Mungo beans, mature seeds, cooked, boiled, without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "tofu-calcium-set": {
+  "name": "Tofu, calcium-set",
+  "srLegacy": "Tofu, raw, regular, prepared with calcium sulfate",
+  "candidates": [],
+  "status": "none"
+ },
+ "tempeh": {
+  "name": "Tempeh",
+  "srLegacy": "Tempeh",
+  "candidates": [],
+  "status": "none"
+ },
+ "amaranth": {
+  "name": "Amaranth",
+  "srLegacy": "Amaranth grain, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "barley-pearled": {
+  "name": "Barley, pearled",
+  "srLegacy": "Barley, pearled, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "buckwheat-groats": {
+  "name": "Buckwheat groats",
+  "srLegacy": "Buckwheat groats, roasted, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "bulgur-wheat": {
+  "name": "Bulgur wheat",
+  "srLegacy": "Bulgur, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "millet": {
+  "name": "Millet",
+  "srLegacy": "Millet, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "oats": {
+  "name": "Oats",
+  "srLegacy": "Oats",
+  "candidates": [
+   {
+    "fdcId": 2779253,
+    "description": "Oats, puffed",
+    "score": 0.75
+   },
+   {
+    "fdcId": 2346397,
+    "description": "Oats, whole grain, steel cut",
+    "score": 0.5
+   },
+   {
+    "fdcId": 2346396,
+    "description": "Oats, whole grain, rolled, old fashioned",
+    "score": 0.45
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2346396,
+  "foundation": "Oats, whole grain, rolled, old fashioned"
+ },
+ "quinoa": {
+  "name": "Quinoa",
+  "srLegacy": "Quinoa, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "brown-rice": {
+  "name": "Brown rice",
+  "srLegacy": "Rice, brown, long-grain, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "white-rice": {
+  "name": "White rice",
+  "srLegacy": "Rice, white, long-grain, regular, unenriched, cooked without salt",
+  "candidates": [],
+  "status": "none"
+ },
+ "wild-rice": {
+  "name": "Wild rice",
+  "srLegacy": "Wild rice, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "rye-berries": {
+  "name": "Rye berries",
+  "srLegacy": "Rye grain",
+  "candidates": [],
+  "status": "none"
+ },
+ "sorghum": {
+  "name": "Sorghum",
+  "srLegacy": "Sorghum grain",
+  "candidates": [],
+  "status": "none"
+ },
+ "spelt": {
+  "name": "Spelt",
+  "srLegacy": "Spelt, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "teff": {
+  "name": "Teff",
+  "srLegacy": "Teff, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "kamut-khorasan-wheat": {
+  "name": "Kamut (khorasan wheat)",
+  "srLegacy": "Wheat, KAMUT khorasan, cooked",
+  "candidates": [],
+  "status": "none"
+ },
+ "wheat-berries": {
+  "name": "Wheat berries",
+  "srLegacy": "Wheat, hard red winter",
+  "candidates": [
+   {
+    "fdcId": 2779246,
+    "description": "Winter wheat, hard red, puffed, organic",
+    "score": 0.67
+   }
+  ],
+  "status": "rejected"
+ },
+ "whole-milk": {
+  "name": "Whole milk",
+  "srLegacy": "Milk, whole, 3.25% milkfat, with added vitamin D",
+  "candidates": [
+   {
+    "fdcId": 746772,
+    "description": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+    "score": 1.0
+   },
+   {
+    "fdcId": 746782,
+    "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "score": 1.0
+   },
+   {
+    "fdcId": 746778,
+    "description": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "score": 0.92
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746782,
+  "foundation": "Milk, whole, 3.25% milkfat, with added vitamin D"
+ },
+ "skim-milk": {
+  "name": "Skim milk",
+  "srLegacy": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)",
+  "candidates": [
+   {
+    "fdcId": 746776,
+    "description": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746776,
+  "foundation": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)"
+ },
+ "goat-s-milk": {
+  "name": "Goat's milk",
+  "srLegacy": "Milk, goat, fluid, with added vitamin D",
+  "candidates": [
+   {
+    "fdcId": 746782,
+    "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "score": 0.85
+   },
+   {
+    "fdcId": 746772,
+    "description": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+    "score": 0.75
+   },
+   {
+    "fdcId": 746778,
+    "description": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "score": 0.68
+   }
+  ],
+  "status": "rejected"
+ },
+ "plain-yogurt": {
+  "name": "Plain yogurt",
+  "srLegacy": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
+  "candidates": [],
+  "status": "none"
+ },
+ "greek-yogurt": {
+  "name": "Greek yogurt",
+  "srLegacy": "Yogurt, Greek, plain, nonfat",
+  "candidates": [
+   {
+    "fdcId": 330137,
+    "description": "Yogurt, Greek, plain, nonfat",
+    "score": 1.0
+   },
+   {
+    "fdcId": 2647437,
+    "description": "Yogurt, plain, nonfat",
+    "score": 1.0
+   },
+   {
+    "fdcId": 2259794,
+    "description": "Yogurt, Greek, plain, whole milk",
+    "score": 0.85
+   }
+  ],
+  "status": "auto",
+  "fdcId": 330137,
+  "foundation": "Yogurt, Greek, plain, nonfat"
+ },
+ "cheddar-cheese": {
+  "name": "Cheddar cheese",
+  "srLegacy": "Cheese, cheddar",
+  "candidates": [
+   {
+    "fdcId": 328637,
+    "description": "Cheese, cheddar",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 328637,
+  "foundation": "Cheese, cheddar"
+ },
+ "swiss-cheese": {
+  "name": "Swiss cheese",
+  "srLegacy": "Cheese, swiss",
+  "candidates": [
+   {
+    "fdcId": 746767,
+    "description": "Cheese, swiss",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 746767,
+  "foundation": "Cheese, swiss"
+ },
+ "goat-cheese-hard": {
+  "name": "Goat cheese, hard",
+  "srLegacy": "Cheese, goat, hard type",
+  "candidates": [],
+  "status": "none"
+ },
+ "mozzarella": {
+  "name": "Mozzarella",
+  "srLegacy": "Cheese, mozzarella, whole milk",
+  "candidates": [],
+  "status": "none"
+ },
+ "feta": {
+  "name": "Feta",
+  "srLegacy": "Cheese, feta",
+  "candidates": [
+   {
+    "fdcId": 2259796,
+    "description": "Cheese, feta, whole milk, crumbled",
+    "score": 0.75
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2259796,
+  "foundation": "Cheese, feta, whole milk, crumbled"
+ },
+ "cottage-cheese": {
+  "name": "Cottage cheese",
+  "srLegacy": "Cheese, cottage, creamed, large or small curd",
+  "candidates": [
+   {
+    "fdcId": 2346384,
+    "description": "Cottage cheese, full fat, large or small curd",
+    "score": 0.62
+   }
+  ],
+  "status": "confirmed",
+  "fdcId": 2346384,
+  "foundation": "Cottage cheese, full fat, large or small curd"
+ },
+ "eggs": {
+  "name": "Eggs",
+  "srLegacy": "Egg, whole, cooked, hard-boiled",
+  "candidates": [],
+  "status": "none"
+ },
+ "chicken-breast": {
+  "name": "Chicken breast",
+  "srLegacy": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "chicken-thigh": {
+  "name": "Chicken thigh",
+  "srLegacy": "Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "chicken-liver": {
+  "name": "Chicken liver",
+  "srLegacy": "Chicken, liver, all classes, cooked, simmered",
+  "candidates": [],
+  "status": "none"
+ },
+ "turkey-breast": {
+  "name": "Turkey breast",
+  "srLegacy": "Turkey, all classes, light meat, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "duck": {
+  "name": "Duck",
+  "srLegacy": "Duck, domesticated, meat only, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "beef-sirloin-steak": {
+  "name": "Beef sirloin steak",
+  "srLegacy": "Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, choice, cooked, broiled",
+  "candidates": [],
+  "status": "none"
+ },
+ "ground-beef-85-lean": {
+  "name": "Ground beef (85% lean)",
+  "srLegacy": "Beef, ground, 85% lean meat / 15% fat, patty, cooked, broiled",
+  "candidates": [],
+  "status": "none"
+ },
+ "beef-liver": {
+  "name": "Beef liver",
+  "srLegacy": "Beef, variety meats and by-products, liver, cooked, braised",
+  "candidates": [],
+  "status": "none"
+ },
+ "pork-chop": {
+  "name": "Pork chop",
+  "srLegacy": "Pork, fresh, loin, center loin (chops), bone-in, separable lean only, cooked, broiled",
+  "candidates": [],
+  "status": "none"
+ },
+ "pork-tenderloin": {
+  "name": "Pork tenderloin",
+  "srLegacy": "Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "lamb-leg": {
+  "name": "Lamb leg",
+  "srLegacy": "Lamb, domestic, leg, whole (shank and sirloin), separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "bison-ground": {
+  "name": "Bison, ground",
+  "srLegacy": "Game meat, bison, ground, cooked, pan-broiled",
+  "candidates": [],
+  "status": "none"
+ },
+ "venison": {
+  "name": "Venison",
+  "srLegacy": "Game meat, deer, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "goat-meat": {
+  "name": "Goat meat",
+  "srLegacy": "Game meat, goat, cooked, roasted",
+  "candidates": [],
+  "status": "none"
+ },
+ "atlantic-salmon-farmed": {
+  "name": "Atlantic salmon, farmed",
+  "srLegacy": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "atlantic-salmon-wild": {
+  "name": "Atlantic salmon, wild",
+  "srLegacy": "Fish, salmon, Atlantic, wild, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "sockeye-salmon": {
+  "name": "Sockeye salmon",
+  "srLegacy": "Fish, salmon, sockeye, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "pink-salmon": {
+  "name": "Pink salmon",
+  "srLegacy": "Fish, salmon, pink, canned, drained solids",
+  "candidates": [],
+  "status": "none"
+ },
+ "atlantic-mackerel": {
+  "name": "Atlantic mackerel",
+  "srLegacy": "Fish, mackerel, Atlantic, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "atlantic-herring": {
+  "name": "Atlantic herring",
+  "srLegacy": "Fish, herring, Atlantic, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "sardines": {
+  "name": "Sardines",
+  "srLegacy": "Fish, sardine, Pacific, canned in tomato sauce, drained solids with bone",
+  "candidates": [],
+  "status": "none"
+ },
+ "anchovies": {
+  "name": "Anchovies",
+  "srLegacy": "Fish, anchovy, european, canned in oil, drained solids",
+  "candidates": [],
+  "status": "none"
+ },
+ "rainbow-trout-wild": {
+  "name": "Rainbow trout, wild",
+  "srLegacy": "Fish, trout, rainbow, wild, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "tuna-light": {
+  "name": "Tuna, light",
+  "srLegacy": "Fish, tuna, light, canned in water, drained solids",
+  "candidates": [
+   {
+    "fdcId": 334194,
+    "description": "Fish, tuna, light, canned in water, drained solids",
+    "score": 1.0
+   }
+  ],
+  "status": "auto",
+  "fdcId": 334194,
+  "foundation": "Fish, tuna, light, canned in water, drained solids"
+ },
+ "yellowfin-tuna": {
+  "name": "Yellowfin tuna",
+  "srLegacy": "Fish, tuna, yellowfin, fresh, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "atlantic-cod": {
+  "name": "Atlantic cod",
+  "srLegacy": "Fish, cod, Atlantic, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "haddock": {
+  "name": "Haddock",
+  "srLegacy": "Fish, haddock, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "halibut": {
+  "name": "Halibut",
+  "srLegacy": "Fish, halibut, Atlantic and Pacific, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "alaska-pollock": {
+  "name": "Alaska pollock",
+  "srLegacy": "Fish, pollock, Alaska, cooked, dry heat (may have been previously frozen)",
+  "candidates": [],
+  "status": "none"
+ },
+ "flounder-and-sole": {
+  "name": "Flounder and sole",
+  "srLegacy": "Fish, flatfish (flounder and sole species), cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "tilapia": {
+  "name": "Tilapia",
+  "srLegacy": "Fish, tilapia, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "catfish-farmed": {
+  "name": "Catfish, farmed",
+  "srLegacy": "Fish, catfish, channel, farmed, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "sea-bass": {
+  "name": "Sea bass",
+  "srLegacy": "Fish, sea bass, mixed species, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "snapper": {
+  "name": "Snapper",
+  "srLegacy": "Fish, snapper, mixed species, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "mahi-mahi": {
+  "name": "Mahi-mahi",
+  "srLegacy": "Fish, mahimahi, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "swordfish": {
+  "name": "Swordfish",
+  "srLegacy": "Fish, swordfish, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "shrimp": {
+  "name": "Shrimp",
+  "srLegacy": "Crustaceans, shrimp, mixed species, cooked, moist heat (may have been previously frozen)",
+  "candidates": [],
+  "status": "none"
+ },
+ "blue-crab": {
+  "name": "Blue crab",
+  "srLegacy": "Crustaceans, crab, blue, cooked, moist heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "lobster": {
+  "name": "Lobster",
+  "srLegacy": "Crustaceans, lobster, northern, cooked, moist heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "clams": {
+  "name": "Clams",
+  "srLegacy": "Mollusks, clam, mixed species, cooked, moist heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "mussels": {
+  "name": "Mussels",
+  "srLegacy": "Mollusks, mussel, blue, cooked, moist heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "oysters-wild": {
+  "name": "Oysters, wild",
+  "srLegacy": "Mollusks, oyster, eastern, wild, cooked, dry heat",
+  "candidates": [],
+  "status": "none"
+ },
+ "octopus": {
+  "name": "Octopus",
+  "srLegacy": "Mollusks, octopus, common, cooked, moist heat",
+  "candidates": [],
+  "status": "none"
+ }
+}
